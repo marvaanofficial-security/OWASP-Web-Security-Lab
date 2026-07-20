@@ -1,1 +1,43 @@
+# Authentication Testing Checklist
+
+Target: OWASP Juice Shop (Lab Environment Only)
+
+Tests Performed
+
+1. Invalid username and valid password
+Expected Result:
+- Login should fail.
+- Generic error message should be displayed.
+
+2. Valid username and invalid password
+Expected Result:
+- Login should fail.
+- No information leakage about the username.
+
+3. Invalid username and invalid password
+Expected Result:
+- Login should fail.
+
+4. Empty username
+Expected Result:
+- Input validation should prevent login.
+
+5. Empty password
+Expected Result:
+- Input validation should prevent login.
+
+6. SQL Injection Testing
+Result:
+- Tested using SQL injection payloads documented separately in sqli.txt.
+
+7. Brute Force Protection
+Expected Result:
+- Account lockout or rate limiting after multiple failed login attempts.
+
+8. Password Policy
+Check:
+- Minimum password length
+- Complexity requirements
+- Secure password storage (hashed)
+
 
